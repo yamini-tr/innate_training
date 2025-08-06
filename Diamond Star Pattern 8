@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        // Top half (including middle)
+        for (int i = 0; i < n; i++) {
+            int spaces = n - i - 1;
+            int stars = 2 * i + 1;
+
+            for (int j = 0; j < spaces; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        // Bottom half (excluding middle)
+        for (int i = n - 2; i >= 0; i--) {
+            int spaces = n - i - 1;
+            int stars = 2 * i + 1;
+
+            for (int j = 0; j < spaces; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+}
